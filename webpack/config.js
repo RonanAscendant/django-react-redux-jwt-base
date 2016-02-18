@@ -47,7 +47,8 @@ config.set('globals', {
   '__DEV__'      : config.get('env') === 'development',
   '__PROD__'     : config.get('env') === 'production',
   '__DEBUG__'    : config.get('env') === 'development' && !argv.no_debug,
-  '__DEBUG_NW__' : !!argv.nw
+  '__DEBUG_NW__' : !!argv.nw,
+  '__DEVTOOLS__' : !process.env.DEV_TEST
 });
 
 // ------------------------------------
